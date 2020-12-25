@@ -2,3 +2,5 @@
 ---
 ___
 # A spam bot to ruin your friend's day!
+# git clone https://github.com/FonderElite/Spam-Bot
+# pip3 install -r requirements.txt
