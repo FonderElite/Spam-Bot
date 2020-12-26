@@ -1,3 +1,4 @@
 pyautogui
 os
 time
+colorama
