@@ -1,7 +1,11 @@
 import pyautogui
 import os
 import time
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 print(
+ Fore.BLUE +
     '''
 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ─██████████████─██████████████─██████████████─██████──────────██████────────────────██████████████───██████████████─██████████████─
@@ -17,10 +21,10 @@ print(
 ─██████████████─██████─────────██████──██████─██████──────────██████────────────────████████████████─██████████████─────██████─────
 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   '''
 )
-print("Made By Droid || FonderElite")
-print("Visit My GitHub: https://github.com/fonderelite")
+print(Fore.GREEN + "Made By Droid || FonderElite")
+print(Fore.GREEN + "Visit My GitHub: https://github.com/fonderelite")
 cool = os.getcwd()
-print("Your current working directory is: " + cool)
+print(Fore.GREEN + "Your current working directory is: " + cool)
 time.sleep(2)
 help = '''
 |-------------------------------------|
@@ -51,14 +55,15 @@ if first == "python3 spambot.py -h ":
 elif first == "python3 spambot.py -f":
     print("Input a file location to open:")
     print(open(input(), 'r'))
-    print("File opened but not executed")
-    print("Try again")
+    print(Fore.RED + "File opened but not executed")
+    print( Fore.RED +"Try again")
+
     first = input("Enter a command:")
 elif first == "python3 spambot.py -o":
     print("Input a file location to open:")
     print(open(input(), 'r'))
-    print("File opened but not executed")
-    print("Try again")
+    print(Fore.RED + "File opened but not executed")
+    print(Fore.RED + "Try again")
     first = input("Enter a command:")
 
 elif first == "python3 spambot.py -f -v -s":
@@ -101,11 +106,15 @@ elif first == "python3 spambot.py -v":
     print("...")
     time.sleep(1)
     print("....")
-    print("Your in verbose mode but not executed.")
-    print("Try again")
+    time.sleep(1)
+    print(".....")
+    time.sleep(1)
+    print("........")
+    print(Fore.RED + "Your in verbose mode but not executed.")
+    print(Fore.RED + "Try again")
     first = input("Enter a command:")
 else:
-    print('''
+    print(Fore.RED + '''
     
 ░█▀▀▀ █▀▀█ █▀▀█ █▀▀█ █▀▀█ █ 
 ░█▀▀▀ █▄▄▀ █▄▄▀ █──█ █▄▄▀ ▀ 
