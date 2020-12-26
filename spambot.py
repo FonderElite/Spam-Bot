@@ -50,7 +50,7 @@ print('''
 ''')
 
 first = input("Enter a command: ")
-if first == "python3 spambot.py -h ":
+if first == "python3 spambot.py -h":
     print(help)
 elif first == "python3 spambot.py -f":
     print("Input a file location to open:")
