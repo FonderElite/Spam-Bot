@@ -3,11 +3,12 @@ import os
 import time
 import colorama
 from colorama import Fore, Back, Style
+
 colorama.init(autoreset=True)
 print(
- Fore.BLUE +
+    Fore.BLUE +
     '''
-    
+
   █████████                                                 ███████████            █████   
  ███░░░░░███                                               ░░███░░░░░███          ░░███    
 ░███    ░░░  ████████   ██████   █████████████              ░███    ░███  ██████  ███████  
@@ -24,9 +25,9 @@ print(
 print(Fore.GREEN + "Made By Droid || FonderElite")
 print(Fore.GREEN + "Visit My GitHub: https://github.com/fonderelite")
 cool = os.getcwd()
-print(Fore.GREEN + "Your current working directory is: " + cool)
+print("Your current working directory is: " + cool)
 time.sleep(2)
-help = '''
+help = Fore.YELLOW + '''
 |-------------------------------------|
 |[+]Commands:                         |
 |[+]-h help                           |
@@ -37,7 +38,7 @@ help = '''
 |ex. python3 spambot.py -f file.txt -s|
 |-------------------------------------|
 '''
-print('''
+print(Fore.YELLOW + '''
 |-------------------------------------|
 |[+]Commands:                         |
 |[+]-h help                           |
@@ -56,7 +57,7 @@ elif first == "python3 spambot.py -f":
     print("Input a file location to open:")
     print(open(input(), 'r'))
     print(Fore.RED + "File opened but not executed")
-    print( Fore.RED +"Try again")
+    print(Fore.RED + "Try again")
 
     first = input("Enter a command:")
 elif first == "python3 spambot.py -o":
@@ -67,25 +68,27 @@ elif first == "python3 spambot.py -o":
     first = input("Enter a command:")
 
 elif first == "python3 spambot.py -f -v -s":
+    print("Entering Verbose mode....")
+    time.sleep(2)
+    print(Fore.GREEN + "OK!")
     print("Input a file location to open:")
     c = open(input(), 'r')
     for word in c:
         pyautogui.typewrite(word)
         time.sleep(5)
         pyautogui.press("enter")
-
 elif first == "python3 spambot.py -o -v -s":
-        print("Input a file location to open:")
-        g = open(input(), 'r')
-        p = open(input(), 'r')
-        for worde in g:
-            pyautogui.typewrite(worde)
+    print("Input a file location to open:")
+    g = open(input(), 'r')
+    p = open(input(), 'r')
+    for worde in g:
+        pyautogui.typewrite(worde)
+        time.sleep(5)
+        pyautogui.press("enter")
+        for wordo in p:
+            pyautogui.typewrite(wordo)
             time.sleep(5)
             pyautogui.press("enter")
-            for wordo in p:
-                pyautogui.typewrite(wordo)
-                time.sleep(5)
-                pyautogui.press("enter")
 
 
 elif first == "python3 spambot.py ":
@@ -96,7 +99,7 @@ elif first == "python3 spambot.py -f -s":
     k = open(input(), 'r')
 
     for word in k:
-        pyautogui.typewrite(word)
+        pyautogui.write(word)
         time.sleep(5)
         pyautogui.press("enter")
 
@@ -115,7 +118,7 @@ elif first == "python3 spambot.py -v":
     first = input("Enter a command:")
 else:
     print(Fore.RED + '''
-    
+
 ░█▀▀▀ █▀▀█ █▀▀█ █▀▀█ █▀▀█ █ 
 ░█▀▀▀ █▄▄▀ █▄▄▀ █──█ █▄▄▀ ▀ 
 ░█▄▄▄ ▀─▀▀ ▀─▀▀ ▀▀▀▀ ▀─▀▀ ▄
