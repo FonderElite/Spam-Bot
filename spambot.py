@@ -35,7 +35,7 @@ help = Fore.YELLOW + '''
 |[+]-o open file                      |
 |[+]-v verbose                        |
 |[+]-s start                          |
-|ex. python3 spambot.py -f file.txt -s|
+|ex. ./spambot -f file.txt -s      |
 |-------------------------------------|
 '''
 print(Fore.YELLOW + '''
@@ -46,64 +46,69 @@ print(Fore.YELLOW + '''
 |[+]-o open file                      |
 |[+]-v verbose                        |
 |[+]-s start                          |
-|ex. python3 spambot.py -f  -s        |
+|ex. ./spambot -f  -s              |
 |-------------------------------------|
 ''')
-
-first = input("Enter a command: ")
-if first == "python3 spambot.py -h":
+while True:
+ first = input("Enter a command: ")
+ if first == "./spambot -h":
     print(help)
-elif first == "python3 spambot.py -f":
+ elif first == "./spambot -f":
     print("Input a file location to open:")
     print(open(input(), 'r'))
     print(Fore.RED + "File opened but not executed")
     print(Fore.RED + "Try again")
 
     first = input("Enter a command:")
-elif first == "python3 spambot.py -o":
+ elif first == "./spambot -o":
     print("Input a file location to open:")
     print(open(input(), 'r'))
     print(Fore.RED + "File opened but not executed")
     print(Fore.RED + "Try again")
     first = input("Enter a command:")
 
-elif first == "python3 spambot.py -f -v -s":
+ elif first == "./spambot -f -v -s":
     print("Entering Verbose mode....")
     time.sleep(2)
     print(Fore.GREEN + "OK!")
     print("Input a file location to open:")
     c = open(input(), 'r')
+    print("Spamming in 5s")
+    time.sleep(5)
     for word in c:
         pyautogui.typewrite(word)
-        time.sleep(5)
+        time.sleep(1)
         pyautogui.press("enter")
-elif first == "python3 spambot.py -o -v -s":
+ elif first == "./spambot -o -v -s":
     print("Input a file location to open:")
     g = open(input(), 'r')
     p = open(input(), 'r')
+    print('Spamming in 5s')
+    time.sleep(5)
     for worde in g:
         pyautogui.typewrite(worde)
-        time.sleep(5)
+        time.sleep(0.5)
         pyautogui.press("enter")
         for wordo in p:
             pyautogui.typewrite(wordo)
-            time.sleep(5)
+            time.sleep(0.5)
             pyautogui.press("enter")
 
 
-elif first == "python3 spambot.py ":
+ elif first == "./spambot":
     print(help)
-elif first == "python3 spambot.py -f -s":
+ elif first == "./spambot -f -s":
 
     print("Input a file location to open:")
     k = open(input(), 'r')
-
+    print('Spamming in 5s')
+    time.sleep(5)
     for word in k:
         pyautogui.write(word)
-        time.sleep(5)
+        time.sleep(0.5)
         pyautogui.press("enter")
 
-elif first == "python3 spambot.py -v":
+ elif first == "spambot -v":
     print("Entering verbose mode..")
     time.sleep(1)
     print("...")
@@ -116,7 +121,7 @@ elif first == "python3 spambot.py -v":
     print(Fore.RED + "Your in verbose mode but not executed.")
     print(Fore.RED + "Try again")
     first = input("Enter a command:")
-else:
+ else:
     print(Fore.RED + '''
 
 ░█▀▀▀ █▀▀█ █▀▀█ █▀▀█ █▀▀█ █ 
