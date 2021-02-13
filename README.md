@@ -15,8 +15,8 @@
  git clone https://github.com/FonderElite/Spam-Bot
 
 # Installation
-### Clone ```git clone https://github.com/FonderElite/Spam-Bot```
-###```pip3 install -r requirements.txt```
+#### Clone ```git clone https://github.com/FonderElite/Spam-Bot```
+#### ```pip3 install -r requirements.txt```
 
 # Pros/Cons
 - [x] Works Effieciently without errors!
